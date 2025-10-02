@@ -196,7 +196,6 @@ h1, h2, h3, h4, h5, h6 {
     gap: var(--spacing-lg);
     flex: 1;
     justify-content: center;
-    margin-right: -180px;
 }
 
 .nav-links a {
@@ -250,6 +249,7 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 0;
     transform: translateY(20px);
     transition: all var(--transition-base);
+    text-decoration: none;
 }
 
 .floating-pill.visible {
