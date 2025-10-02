@@ -284,3 +284,47 @@ toggleButtons.forEach(btn => {
         trackEvent('Navigation', 'Tab Switch', btn.textContent.trim());
     });
 });
+
+// ================================
+// Video Controls
+// ================================
+
+const heroVideo = document.getElementById('heroVideo');
+const playPauseBtn = document.getElementById('playPauseBtn');
+const soundBtn = document.getElementById('soundBtn');
+const playIcon = document.getElementById('playIcon');
+const pauseIcon = document.getElementById('pauseIcon');
+const soundIcon = document.getElementById('soundIcon');
+const mutedIcon = document.getElementById('mutedIcon');
+
+if (heroVideo) {
+    // Play/Pause button
+    if (playPauseBtn) {
+        playPauseBtn.addEventListener('click', () => {
+            if (heroVideo.paused) {
+                heroVideo.play();
+                playIcon.style.display = 'none';
+                pauseIcon.style.display = 'block';
+            } else {
+                heroVideo.pause();
+                playIcon.style.display = 'block';
+                pauseIcon.style.display = 'none';
+            }
+        });
+    }
+
+    // Sound button
+    if (soundBtn) {
+        soundBtn.addEventListener('click', () => {
+            if (heroVideo.muted) {
+                heroVideo.muted = false;
+                mutedIcon.style.display = 'none';
+                soundIcon.style.display = 'block';
+            } else {
+                heroVideo.muted = true;
+                mutedIcon.style.display = 'block';
+                soundIcon.style.display = 'none';
+            }
+        });
+    }
+}
