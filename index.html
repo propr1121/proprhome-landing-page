@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProprHome - The Property Platform That Shares Success</title>
+    <meta name="description" content="Where agents, agencies, and clients win together. Join Portugal's next-generation real estate platform.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Icon Sprite -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      <!-- AI/Robot Icon -->
+      <symbol id="icon-ai" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+        <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+        <circle cx="9" cy="16" r="1"/>
+        <circle cx="15" cy="16" r="1"/>
+        <path d="M9 19h6"/>
+      </symbol>
+      <!-- Chart/Analytics Icon -->
+      <symbol id="icon-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="20" x2="18" y2="10"/>
+        <line x1="12" y1="20" x2="12" y2="4"/>
+        <line x1="6" y1="20" x2="6" y2="14"/>
+      </symbol>
+      <!-- Data/Database Icon -->
+      <symbol id="icon-data" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <ellipse cx="12" cy="5" rx="9" ry="3"/>
+        <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+        <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+      </symbol>
+      <!-- Search Icon -->
+      <symbol id="icon-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"/>
+        <path d="m21 21-4.35-4.35"/>
+      </symbol>
+      <!-- Calendar Icon -->
+      <symbol id="icon-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+        <line x1="16" y1="2" x2="16" y2="6"/>
+        <line x1="8" y1="2" x2="8" y2="6"/>
+        <line x1="3" y1="10" x2="21" y2="10"/>
+      </symbol>
+      <!-- Gem/Diamond Icon -->
+      <symbol id="icon-gem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="12 2 2 7 12 22 22 7 12 2"/>
+        <polyline points="12 22 12 11"/>
+        <polyline points="2 7 12 11 22 7"/>
+        <polyline points="8 2 12 11 16 2"/>
+      </symbol>
+      <!-- Document/File Icon -->
+      <symbol id="icon-document" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+        <polyline points="14 2 14 8 20 8"/>
+        <line x1="16" y1="13" x2="8" y2="13"/>
+        <line x1="16" y1="17" x2="8" y2="17"/>
+        <polyline points="10 9 9 9 8 9"/>
+      </symbol>
+      <!-- Refresh/Sync Icon -->
+      <symbol id="icon-refresh" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="23 4 23 10 17 10"/>
+        <polyline points="1 20 1 14 7 14"/>
+        <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+      </symbol>
+      <!-- Users/Team Icon -->
+      <symbol id="icon-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+        <circle cx="9" cy="7" r="4"/>
+        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+      </symbol>
+      <!-- Home/House Icon -->
+      <symbol id="icon-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+        <polyline points="9 22 9 12 15 12 15 22"/>
+      </symbol>
+      <!-- Check/Verified Icon -->
+      <symbol id="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+        <polyline points="22 4 12 14.01 9 11.01"/>
+      </symbol>
+      <!-- Message/Chat Icon -->
+      <symbol id="icon-message" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+      </symbol>
+      <!-- Folder Icon -->
+      <symbol id="icon-folder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+      </symbol>
+      <!-- Star Icon -->
+      <symbol id="icon-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+      </symbol>
+      <!-- Lock Icon -->
+      <symbol id="icon-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+        <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+      </symbol>
+      <!-- Shield Icon -->
+      <symbol id="icon-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      </symbol>
+      <!-- Lightning/Zap Icon -->
+      <symbol id="icon-zap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+      </symbol>
+      <!-- Trophy Icon -->
+      <symbol id="icon-trophy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
+        <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
+        <path d="M4 22h16"/>
+        <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/>
+        <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/>
+        <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>
+      </symbol>
+      <!-- Handshake Icon -->
+      <symbol id="icon-handshake" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M11 12h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 14"/>
+        <path d="m7 18 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9"/>
+        <path d="m2 13 6 6"/>
+      </symbol>
+      <!-- Trending Up Icon -->
+      <symbol id="icon-trending-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+        <polyline points="17 6 23 6 23 12"/>
+      </symbol>
+      <!-- Rocket Icon -->
+      <symbol id="icon-rocket" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/>
+        <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/>
+        <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/>
+        <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>
+      </symbol>
+    </svg>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <img src="ProprHome_logo_for_white_bg.png?v=3" alt="ProprHome" style="height: 28px !important;">
+                </div>
+                <div class="nav-links" id="navLinks">
+                    <a href="#agents">For Agents</a>
+                    <a href="#agencies">For Agencies</a>
+                    <a href="#buyers">For Buyers & Tenants</a>
+                </div>
+                <a href="pioneer.html" class="btn btn-primary nav-cta">Join Pioneer Program</a>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Floating Pioneer Pill -->
+    <a href="pioneer.html" class="floating-pill" id="floatingPill">
+        <img src="Branding%20/ProprHome_logomark.svg" alt="" class="pill-icon-svg" width="32" height="32">
+        <span>Pioneer Program - €99 Lifetime</span>
+        <button class="pill-cta">Claim Now</button>
+    </a>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">Real Estate That Rewards You</h1>
+                    <p class="hero-subtitle">The first platform where your success is our success</p>
+                    <div class="value-pills">
+                        <div class="pill">
+                            <img src="Branding%20/AI%20Matching.svg" alt="" class="pill-icon" width="20" height="20">
+                            <span>AI Matching</span>
+                        </div>
+                        <div class="pill">
+                            <img src="Branding%20/Data%20sharing.svg" alt="" class="pill-icon" width="20" height="20">
+                            <span>Data Sharing</span>
+                        </div>
+                        <div class="pill">
+                            <img src="Branding%20/Real%20time%20analytics.svg" alt="" class="pill-icon" width="20" height="20">
+                            <span>Real Analytics</span>
+                        </div>
+                    </div>
+                    <form class="hero-form" id="heroForm">
+                        <input type="email" placeholder="Enter your email" id="heroEmail" required aria-label="Email address">
+                        <button type="submit" class="btn btn-primary">Get Early Access</button>
+                        <div class="form-error" id="heroError"></div>
+                    </form>
+                </div>
+                <div class="hero-visual">
+                    <div class="video-container">
+                        <video
+                            id="heroVideo"
+                            autoplay
+                            muted
+                            loop
+                            playsinline
+                            preload="auto"
+                            aria-label="ProprHome promotional video">
+                            <source src="promovideo.mov" type="video/mp4">
+                            <source src="promovideo.mov" type="video/quicktime">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- User Type Section -->
+    <section class="user-types">
+        <div class="container">
+            <div class="pill-toggle" role="tablist">
+                <button class="toggle-btn active" data-target="agents" role="tab" aria-selected="true" aria-controls="agents">For Agents</button>
+                <button class="toggle-btn" data-target="agencies" role="tab" aria-selected="false" aria-controls="agencies">For Agencies</button>
+                <button class="toggle-btn" data-target="buyers" role="tab" aria-selected="false" aria-controls="buyers">For Buyers & Tenants</button>
+            </div>
+
+            <!-- For Agents -->
+            <div class="content-panel active" id="agents" role="tabpanel">
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <img src="Branding%20/AI%20Matching.svg" alt="" class="feature-icon" width="48" height="48">
+                        <h3>Find buyers faster</h3>
+                        <p>AI-powered matching</p>
+                    </div>
+                    <div class="feature-card">
+                        <img src="Branding%20/Calendar%20sync.svg" alt="" class="feature-icon" width="48" height="48">
+                        <h3>Never double-book</h3>
+                        <p>Auto calendar sync</p>
+                    </div>
+                    <div class="feature-card">
+                        <img src="Branding%20/Propr%20Points.svg" alt="" class="feature-icon" width="48" height="48">
+                        <h3>Earn on every deal</h3>
+                        <p>Propr Points add up</p>
+                    </div>
+                    <div class="feature-card">
+                        <img src="Branding%20/Close%20deals%20online.svg" alt="" class="feature-icon" width="48" height="48">
+                        <h3>Close deals online</h3>
+                        <p>Full digital workflow</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- For Agencies -->
+            <div class="content-panel" id="agencies" role="tabpanel">
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <img src="Branding%20/talks%20with%20your%20crm.svg" alt="" class="feature-icon" width="48" height="48">
+                        <h3>Talks to your CRM</h3>
+                        <p>Seamless integration</p>
+                    </div>
+                    <div class="feature-card">
+                        <img src="Branding%20/Understand%20what%20works.svg" alt="" class="feature-icon" width="48" height="48">
+                        <h3>Understand your data</h3>
+                        <p>Real-time insights</p>
+                    </div>
+                    <div class="feature-card">
+                        <img src="Branding%20/Monetize%20your%20data.svg" alt="" class="feature-icon" width="48" height="48">
+                        <h3>Monetize your data</h3>
+                        <p>Turn insights into income</p>
+                    </div>
+                    <div class="feature-card">
+                        <img src="Branding%20/Optimise%20your%20team.svg" alt="" class="feature-icon" width="48" height="48">
+                        <h3>Optimise your team</h3>
+                        <p>Full team controls</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- For Buyers & Tenants -->
+            <div class="content-panel" id="buyers" role="tabpanel">
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <img src="Branding%20/Every%20property,%20one%20place.svg" alt="" class="feature-icon" width="48" height="48">
+                        <h3>Every property, one place</h3>
+                        <p>Complete market access</p>
+                    </div>
+                    <div class="feature-card">
+                        <img src="Branding%20/Matches%20you'll%20love.svg" alt="" class="feature-icon" width="48" height="48">
+                        <h3>Matches you'll love</h3>
+                        <p>AI-powered recommendations</p>
+                    </div>
+                    <div class="feature-card">
+                        <img src="Branding%20/Bockchain%20verified.svg" alt="" class="feature-icon" width="48" height="48">
+                        <h3>Verified listings</h3>
+                        <p>Blockchain-backed</p>
+                    </div>
+                    <div class="feature-card">
+                        <img src="Branding%20/Direct%20agent%20chat.svg" alt="" class="feature-icon" width="48" height="48">
+                        <h3>Direct agent chat</h3>
+                        <p>Real people, real answers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What Makes Us Different -->
+    <section class="different">
+        <div class="container">
+            <h2 class="section-title">Not another portal. A partner.</h2>
+            <div class="three-col">
+                <div class="col-item">
+                    <img src="Branding%20/You%20grow%20we%20grow.svg" alt="" class="col-icon" width="56" height="56">
+                    <h3>You grow, we grow</h3>
+                    <p>Data sharing built into our model</p>
+                </div>
+                <div class="col-item">
+                    <img src="Branding%20/Data%20sharing.svg" alt="" class="col-icon" width="56" height="56">
+                    <h3>Your data, your value</h3>
+                    <p>Monetize what you generate</p>
+                </div>
+                <div class="col-item">
+                    <img src="Branding%20/Total%20transparency.svg" alt="" class="col-icon" width="56" height="56">
+                    <h3>Total transparency</h3>
+                    <p>No hidden fees, ever</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pioneer Program -->
+    <section class="pioneer-program">
+        <div class="container">
+            <div class="pioneer-header">
+                <div class="accent-line"></div>
+                <h2>Be First. Pay Once.</h2>
+                <p>Join the agents shaping real estate's future</p>
+            </div>
+            <div class="pricing-cards">
+                <div class="pricing-card featured">
+                    <div class="pioneer-badge">Pioneer</div>
+                    <div class="price">
+                        <span class="amount">€99</span>
+                        <span class="period">forever</span>
+                    </div>
+                    <ul class="features-list">
+                        <li>✓ Lifetime access</li>
+                        <li>✓ All pro plan features</li>
+                        <li>✓ Priority support</li>
+                        <li>✓ Shape the product</li>
+                        <li>✓ Pioneer badge</li>
+                    </ul>
+                    <a href="pioneer.html" class="btn btn-primary btn-full">Go Pioneer</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="standard-badge">Pro Plan</div>
+                    <div class="price">
+                        <span class="amount">€59</span>
+                        <span class="period">per month</span>
+                    </div>
+                    <ul class="features-list">
+                        <li>✓ Up to 30 property listings</li>
+                        <li>✓ Premium exposure</li>
+                        <li>✓ Scheduling tools</li>
+                        <li>✓ My similar properties</li>
+                        <li>✓ Agent in focus enabled</li>
+                    </ul>
+                    <button class="btn btn-secondary btn-full" disabled>Coming Soon</button>
+                </div>
+            </div>
+            <p class="pioneer-note">Limited spots available</p>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="three-col">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <h3>Sign Up</h3>
+                    <p>Create your account in 60 seconds</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <h3>Connect</h3>
+                    <p>Link your tools and CRM</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <h3>Grow</h3>
+                    <p>Start earning from day one</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platform Features -->
+    <section class="platform-features">
+        <div class="container">
+            <h2 class="section-title">Everything you need in one platform</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <img src="Branding%20/AI%20Search%20engine.svg" alt="" class="feature-icon" width="48" height="48">
+                    <h3>AI Powered Search</h3>
+                    <p>Find properties faster</p>
+                </div>
+                <div class="feature-card">
+                    <img src="Branding%20/Deal%20room.svg" alt="" class="feature-icon" width="48" height="48">
+                    <h3>Deal Room</h3>
+                    <p>Digital transaction management</p>
+                </div>
+                <div class="feature-card">
+                    <img src="Branding%20/Calendar%20sync.svg" alt="" class="feature-icon" width="48" height="48">
+                    <h3>Calendar Sync</h3>
+                    <p>Never miss an appointment</p>
+                </div>
+                <div class="feature-card">
+                    <img src="Branding%20/Document%20vault.svg" alt="" class="feature-icon" width="48" height="48">
+                    <h3>Document Vault</h3>
+                    <p>Secure, verified storage</p>
+                </div>
+                <div class="feature-card">
+                    <img src="Branding%20/Real%20time%20analytics.svg" alt="" class="feature-icon" width="48" height="48">
+                    <h3>Analytics Dashboard</h3>
+                    <p>Real-time performance</p>
+                </div>
+                <div class="feature-card">
+                    <img src="Branding%20/Propr%20Points.svg" alt="" class="feature-icon" width="48" height="48">
+                    <h3>Propr Points</h3>
+                    <p>Rewards that matter</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="trust">
+        <div class="container">
+            <div class="trust-items">
+                <div class="trust-item">
+                    <img src="Branding%20/Bockchain%20verified.svg" alt="" class="trust-icon" width="48" height="48">
+                    <p>Blockchain Verified</p>
+                </div>
+                <div class="trust-item">
+                    <img src="Branding%20/GDPR.svg" alt="" class="trust-icon" width="48" height="48">
+                    <p>GDPR Compliant</p>
+                </div>
+                <div class="trust-item">
+                    <img src="Branding%20/Real-time%20Data.svg" alt="" class="trust-icon" width="48" height="48">
+                    <p>Real-time Data</p>
+                </div>
+                <div class="trust-item">
+                    <img src="Branding%20/Agent%20first.svg" alt="" class="trust-icon" width="48" height="48">
+                    <p>Agent-First</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Ready to join us?</h2>
+            <div class="cta-buttons">
+                <a href="pioneer.html" class="btn btn-primary btn-large">Become a Pioneer - €99</a>
+                <button class="btn btn-secondary-outline btn-large">See How It Works</button>
+            </div>
+            <p class="cta-note">No commitments • Start today</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="Branding%20/ProprHome_logomark.svg" alt="ProprHome" height="32">
+                    </div>
+                    <p>We have it all.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <a href="#agents">For Agents</a>
+                    <a href="#agencies">For Agencies</a>
+                    <a href="#buyers">For Buyers</a>
+                    <a href="#features">Features</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="#about">About</a>
+                    <a href="#blog">Blog</a>
+                    <a href="#careers">Careers</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <a href="#privacy">Privacy</a>
+                    <a href="#terms">Terms</a>
+                    <a href="#cookies">Cookies</a>
+                    <a href="#gdpr">GDPR</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ProprHome. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
