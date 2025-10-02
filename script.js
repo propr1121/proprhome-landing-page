@@ -158,12 +158,33 @@ pioneerButtons.forEach(button => {
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+        const href = this.getAttribute('href');
+        const targetId = href.substring(1); // Remove the #
+
+        // If it's one of the user type sections, activate the corresponding tab
+        if (targetId === 'agents' || targetId === 'agencies' || targetId === 'buyers') {
+            const targetButton = document.querySelector(`.toggle-btn[data-target="${targetId}"]`);
+            if (targetButton) {
+                targetButton.click();
+            }
+
+            // Scroll to the user types section
+            const userTypesSection = document.querySelector('.user-types');
+            if (userTypesSection) {
+                userTypesSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        } else {
+            // For other hash links, scroll to the target
+            const target = document.querySelector(href);
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
         }
     });
 });
@@ -251,6 +272,47 @@ if (prefersReducedMotion.matches) {
     document.querySelectorAll('*').forEach(el => {
         el.style.animation = 'none';
         el.style.transition = 'none';
+    });
+}
+
+// ================================
+// Video Controls
+// ================================
+
+const heroVideo = document.getElementById('heroVideo');
+const playPauseBtn = document.getElementById('playPauseBtn');
+const muteBtn = document.getElementById('muteBtn');
+
+if (heroVideo && playPauseBtn && muteBtn) {
+    const playIcon = playPauseBtn.querySelector('.play-icon');
+    const pauseIcon = playPauseBtn.querySelector('.pause-icon');
+    const muteIcon = muteBtn.querySelector('.mute-icon');
+    const unmuteIcon = muteBtn.querySelector('.unmute-icon');
+
+    // Play/Pause functionality
+    playPauseBtn.addEventListener('click', () => {
+        if (heroVideo.paused) {
+            heroVideo.play();
+            playIcon.style.display = 'none';
+            pauseIcon.style.display = 'block';
+        } else {
+            heroVideo.pause();
+            playIcon.style.display = 'block';
+            pauseIcon.style.display = 'none';
+        }
+    });
+
+    // Mute/Unmute functionality
+    muteBtn.addEventListener('click', () => {
+        if (heroVideo.muted) {
+            heroVideo.muted = false;
+            muteIcon.style.display = 'block';
+            unmuteIcon.style.display = 'none';
+        } else {
+            heroVideo.muted = true;
+            muteIcon.style.display = 'none';
+            unmuteIcon.style.display = 'block';
+        }
     });
 }
 

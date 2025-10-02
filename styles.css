@@ -129,6 +129,7 @@ h1, h2, h3, h4, h5, h6 {
 .btn-secondary {
     background: var(--color-text-secondary);
     color: white;
+    box-shadow: var(--shadow-sm);
 }
 
 .btn-secondary-outline {
@@ -154,6 +155,7 @@ h1, h2, h3, h4, h5, h6 {
 .btn:disabled {
     opacity: 0.5;
     cursor: not-allowed;
+    padding: 12px 24px;
 }
 
 /* ================================
@@ -374,7 +376,7 @@ h1, h2, h3, h4, h5, h6 {
 .video-container {
     position: relative;
     width: 100%;
-    max-width: 560px;
+    max-width: 644px;
     border-radius: var(--radius-lg);
     overflow: hidden;
     box-shadow: var(--shadow-lg);
