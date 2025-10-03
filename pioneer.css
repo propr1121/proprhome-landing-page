@@ -179,6 +179,59 @@
     background-image: none;
 }
 
+/* Payment Section */
+.payment-section {
+    display: none;
+    padding: var(--spacing-xl) 0;
+}
+
+.payment-amount {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-md);
+    background: var(--color-background-alt);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.payment-amount .label {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-text-secondary);
+}
+
+.payment-amount .amount {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+#payment-element {
+    margin-bottom: var(--spacing-lg);
+}
+
+.payment-error {
+    color: #df1b41;
+    font-size: 14px;
+    margin-bottom: var(--spacing-md);
+    min-height: 20px;
+}
+
+.spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spinner 0.6s linear infinite;
+}
+
+@keyframes spinner {
+    to { transform: rotate(360deg); }
+}
+
 /* Success Message */
 .success-message {
     display: none;

@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="pioneer.css">
+    <script src="https://js.stripe.com/v3/"></script>
 </head>
 <body>
     <!-- Navigation -->
@@ -119,8 +120,28 @@
                         <input type="text" id="company" name="company">
                     </div>
 
-                    <button type="submit" class="btn btn-primary btn-large btn-full">Join Pioneer Program - €99</button>
+                    <button type="submit" class="btn btn-primary btn-large btn-full">Continue to Payment</button>
                 </form>
+
+                <!-- Payment Section (hidden by default) -->
+                <div class="payment-section" id="paymentSection">
+                    <div class="form-header">
+                        <h3>Complete Your Payment</h3>
+                        <p>Secure your lifetime membership for €99</p>
+                    </div>
+                    <div class="payment-amount">
+                        <span class="label">Total:</span>
+                        <span class="amount">€99.00</span>
+                    </div>
+                    <div id="payment-element">
+                        <!-- Stripe Payment Element will be inserted here -->
+                    </div>
+                    <div id="payment-message" class="payment-error"></div>
+                    <button id="submit-payment" class="btn btn-primary btn-large btn-full">
+                        <span id="button-text">Pay €99</span>
+                        <span id="spinner" class="spinner" style="display: none;"></span>
+                    </button>
+                </div>
 
                 <!-- Success Message (hidden by default) -->
                 <div class="success-message" id="successMessage">
