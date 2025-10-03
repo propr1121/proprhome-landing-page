@@ -264,14 +264,8 @@ featureCards.forEach(card => {
 // Pricing Card Click to Scroll
 // ================================
 
-const featuredPricingCard = document.querySelector('.pricing-card.featured .btn');
-
-if (featuredPricingCard) {
-    featuredPricingCard.addEventListener('click', () => {
-        // In a real app, this would redirect to a signup/payment page
-        alert('Welcome to the Pioneer Program! 🚀\n\nYou\'re about to join an exclusive group of forward-thinking real estate professionals.\n\nRedirecting to signup...');
-    });
-}
+// Pioneer card button already has href="pioneer.html" in index.html
+// No JavaScript needed - just let it redirect
 
 // ================================
 // Dynamic Year in Footer
