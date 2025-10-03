@@ -83,15 +83,15 @@
 
 .hiw-grid {
     display: grid;
-    grid-template-columns: 200px 1fr;
-    gap: var(--spacing-xl);
+    grid-template-columns: 80px 1fr;
+    gap: var(--spacing-lg);
     align-items: start;
     max-width: 900px;
     margin: 0 auto;
 }
 
 .hiw-grid.reverse {
-    grid-template-columns: 1fr 200px;
+    grid-template-columns: 1fr 80px;
 }
 
 .hiw-grid.reverse .hiw-visual {
@@ -110,15 +110,16 @@
 }
 
 .icon-circle {
-    width: 80px;
-    height: 80px;
-    background: var(--color-primary);
+    width: 64px;
+    height: 64px;
+    background: white;
+    border: 2px solid var(--color-primary);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
-    box-shadow: 0 4px 12px rgba(0, 209, 136, 0.2);
+    color: var(--color-primary);
+    flex-shrink: 0;
 }
 
 .hiw-content {
@@ -265,6 +266,15 @@
     flex-wrap: wrap;
 }
 
+.hiw-cta .btn-primary {
+    background: white;
+    color: var(--color-primary);
+}
+
+.hiw-cta .btn-primary:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
+
 .btn-secondary-outline {
     background: transparent;
     border: 2px solid white;
@@ -272,8 +282,7 @@
 }
 
 .btn-secondary-outline:hover {
-    background: white;
-    color: var(--color-primary);
+    background: rgba(255, 255, 255, 0.2);
 }
 
 /* Responsive */
