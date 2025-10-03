@@ -100,18 +100,19 @@
 .icon-circle {
     width: 160px;
     height: 160px;
-    background: linear-gradient(135deg, #00D188 0%, #0066FF 100%);
+    background: var(--color-primary);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    box-shadow: 0 20px 40px rgba(0, 209, 136, 0.2);
+    box-shadow: 0 20px 40px rgba(0, 102, 255, 0.15);
     transition: transform var(--transition-base);
 }
 
 .icon-circle:hover {
-    transform: scale(1.05);
+    transform: translateY(-4px);
+    box-shadow: 0 24px 48px rgba(0, 102, 255, 0.2);
 }
 
 .hiw-content {
@@ -187,8 +188,15 @@
     box-shadow: var(--shadow-lg);
 }
 
-.focus-icon {
-    font-size: 48px;
+.focus-icon-svg {
+    width: 64px;
+    height: 64px;
+    background: var(--color-background-alt);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
     margin-bottom: var(--spacing-md);
 }
 
@@ -226,7 +234,7 @@
 /* CTA Section */
 .hiw-cta {
     padding: var(--spacing-3xl) 0;
-    background: linear-gradient(135deg, #0066FF 0%, #00D188 100%);
+    background: var(--color-primary);
     text-align: center;
     color: white;
 }
