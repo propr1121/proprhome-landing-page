@@ -1,0 +1,373 @@
+/* How It Works Page Styles */
+
+/* Hero Section */
+.hiw-hero {
+    padding: var(--spacing-3xl) 0 var(--spacing-2xl);
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    text-align: center;
+}
+
+.hiw-hero h1 {
+    font-size: 56px;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-md);
+}
+
+.hiw-hero .subtitle {
+    font-size: 24px;
+    color: var(--color-text-secondary);
+    font-weight: 500;
+}
+
+/* Toggle Section */
+.toggle-section {
+    padding: var(--spacing-2xl) 0;
+    background: white;
+}
+
+.user-toggle {
+    display: inline-flex;
+    background: var(--color-background-alt);
+    border-radius: var(--radius-full);
+    padding: 6px;
+    gap: 6px;
+}
+
+.toggle-option {
+    padding: 14px 32px;
+    border: none;
+    background: transparent;
+    color: var(--color-text-secondary);
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    transition: all var(--transition-base);
+    font-family: inherit;
+}
+
+.toggle-option:hover {
+    color: var(--color-text-primary);
+}
+
+.toggle-option.active {
+    background: white;
+    color: var(--color-primary);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Content Wrapper */
+.content-wrapper {
+    display: none;
+}
+
+.content-wrapper.active {
+    display: block;
+}
+
+/* How It Works Sections */
+.hiw-section {
+    padding: var(--spacing-3xl) 0;
+    background: white;
+}
+
+.hiw-section.alternate {
+    background: var(--color-background-alt);
+}
+
+.hiw-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-3xl);
+    align-items: center;
+}
+
+.hiw-grid.reverse {
+    direction: rtl;
+}
+
+.hiw-grid.reverse > * {
+    direction: ltr;
+}
+
+.hiw-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-circle {
+    width: 160px;
+    height: 160px;
+    background: linear-gradient(135deg, #00D188 0%, #0066FF 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0 20px 40px rgba(0, 209, 136, 0.2);
+    transition: transform var(--transition-base);
+}
+
+.icon-circle:hover {
+    transform: scale(1.05);
+}
+
+.hiw-content {
+    padding: var(--spacing-lg);
+}
+
+.step-number {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: var(--spacing-sm);
+}
+
+.hiw-content h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.2;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.feature-list li {
+    padding: 12px 0;
+    padding-left: 32px;
+    position: relative;
+    color: var(--color-text-secondary);
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.feature-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: 20px;
+}
+
+/* Focus Section */
+.focus-section {
+    padding: var(--spacing-3xl) 0;
+    background: white;
+}
+
+.focus-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-xl);
+}
+
+.focus-card {
+    background: var(--color-background-alt);
+    padding: var(--spacing-2xl);
+    border-radius: var(--radius-lg);
+    border: 2px solid #e5e7eb;
+    transition: all var(--transition-base);
+}
+
+.focus-card:hover {
+    border-color: var(--color-primary);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.focus-icon {
+    font-size: 48px;
+    margin-bottom: var(--spacing-md);
+}
+
+.focus-card h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-md);
+}
+
+.focus-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.focus-card li {
+    padding: 10px 0;
+    padding-left: 28px;
+    position: relative;
+    color: var(--color-text-secondary);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.focus-card li::before {
+    content: '•';
+    position: absolute;
+    left: 8px;
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: 20px;
+}
+
+/* CTA Section */
+.hiw-cta {
+    padding: var(--spacing-3xl) 0;
+    background: linear-gradient(135deg, #0066FF 0%, #00D188 100%);
+    text-align: center;
+    color: white;
+}
+
+.hiw-cta h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: var(--spacing-md);
+}
+
+.hiw-cta p {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: var(--spacing-xl);
+}
+
+.cta-buttons {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-secondary-outline {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.btn-secondary-outline:hover {
+    background: white;
+    color: var(--color-primary);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .hiw-hero h1 {
+        font-size: 44px;
+    }
+
+    .hiw-content h2 {
+        font-size: 28px;
+    }
+
+    .hiw-grid {
+        gap: var(--spacing-xl);
+    }
+
+    .icon-circle {
+        width: 120px;
+        height: 120px;
+    }
+
+    .icon-circle svg {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hiw-hero h1 {
+        font-size: 36px;
+    }
+
+    .hiw-hero .subtitle {
+        font-size: 18px;
+    }
+
+    .user-toggle {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .toggle-option {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hiw-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    .hiw-grid.reverse {
+        direction: ltr;
+    }
+
+    .icon-circle {
+        width: 100px;
+        height: 100px;
+    }
+
+    .icon-circle svg {
+        width: 32px;
+        height: 32px;
+    }
+
+    .hiw-content h2 {
+        font-size: 24px;
+    }
+
+    .feature-list li {
+        font-size: 16px;
+    }
+
+    .focus-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hiw-cta h2 {
+        font-size: 28px;
+    }
+
+    .hiw-cta p {
+        font-size: 16px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0 var(--spacing-md);
+    }
+
+    .cta-buttons .btn {
+        width: 100%;
+    }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hiw-section {
+    animation: fadeInUp 0.6s ease-out;
+}

@@ -310,8 +310,15 @@ if (heroVideo && playPauseBtn && muteBtn) {
     const muteIcon = muteBtn.querySelector('.mute-icon');
     const unmuteIcon = muteBtn.querySelector('.unmute-icon');
 
+    // Set initial state - video is muted by default, so show unmute icon
+    if (heroVideo.muted) {
+        muteIcon.style.display = 'none';
+        unmuteIcon.style.display = 'block';
+    }
+
     // Play/Pause functionality
-    playPauseBtn.addEventListener('click', () => {
+    playPauseBtn.addEventListener('click', (e) => {
+        e.preventDefault();
         if (heroVideo.paused) {
             heroVideo.play();
             playIcon.style.display = 'none';
@@ -324,7 +331,8 @@ if (heroVideo && playPauseBtn && muteBtn) {
     });
 
     // Mute/Unmute functionality
-    muteBtn.addEventListener('click', () => {
+    muteBtn.addEventListener('click', (e) => {
+        e.preventDefault();
         if (heroVideo.muted) {
             heroVideo.muted = false;
             muteIcon.style.display = 'block';
