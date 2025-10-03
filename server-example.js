@@ -3,9 +3,13 @@
 
 const express = require('express');
 const stripe = require('stripe')('sk_test_YOUR_SECRET_KEY_HERE'); // Replace with your Stripe secret key
+const { Resend } = require('resend');
 
 const app = express();
 app.use(express.json());
+
+// Initialize Resend for email notifications
+const resend = new Resend('re_ieQAuZb5_23vuQNBzsgikdqwJHhQ7qzat');
 
 app.post('/create-payment-intent', async (req, res) => {
     try {
@@ -59,12 +63,20 @@ app.post('/webhook', express.raw({type: 'application/json'}), async (req, res) =
             // Save the customer and payment information to your database
             console.log('Payment succeeded:', customerData);
 
-            // TODO: Send notification email to team
-            // Send to: Miguel@proprhome.com, info@proprhome.com
-            // Include: Customer name, email, phone, company, payment amount
-
-            // TODO: Send confirmation email to customer
-            // Send welcome email with next steps
+            // Send emails via Resend (run resend-server.js on port 3000)
+            try {
+                await fetch('http://localhost:3000/notify-pioneer-payment', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        customerData,
+                        paymentAmount: paymentIntent.amount
+                    })
+                });
+                console.log('✅ Payment notification emails sent');
+            } catch (error) {
+                console.error('❌ Failed to send payment emails:', error);
+            }
 
             break;
         case 'payment_intent.payment_failed':
