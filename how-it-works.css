@@ -110,21 +110,29 @@
 }
 
 .icon-circle {
-    width: 96px;
-    height: 96px;
-    background: white;
-    border: 3px solid var(--color-primary);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-primary);
-    flex-shrink: 0;
+    width: 96px !important;
+    height: 96px !important;
+    background: white !important;
+    border: 3px solid var(--color-primary) !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: var(--color-primary) !important;
+    flex-shrink: 0 !important;
 }
 
 .icon-circle svg {
-    width: 48px;
-    height: 48px;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.hiw-section::before,
+.hiw-section::after,
+.hiw-visual::before,
+.hiw-visual::after {
+    display: none !important;
+    content: none !important;
 }
 
 .hiw-content {
