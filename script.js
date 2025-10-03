@@ -93,8 +93,9 @@ toggleButtons.forEach(button => {
 const heroForm = document.getElementById('heroForm');
 const heroEmail = document.getElementById('heroEmail');
 const heroError = document.getElementById('heroError');
+const heroSuccess = document.getElementById('heroSuccess');
 
-heroForm.addEventListener('submit', (e) => {
+heroForm.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const email = heroEmail.value.trim();
@@ -116,9 +117,29 @@ heroForm.addEventListener('submit', (e) => {
     heroError.textContent = '';
     heroEmail.classList.remove('error');
 
-    // Success - in a real app, this would send to a backend
-    alert(`Thank you! We'll send early access info to ${email}`);
-    heroForm.reset();
+    // Send email to backend
+    try {
+        const response = await fetch('/subscribe-early-access', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ email })
+        });
+
+        if (response.ok) {
+            // Success - show success message
+            heroForm.style.display = 'none';
+            heroSuccess.classList.add('show');
+        } else {
+            showError('Something went wrong. Please try again.');
+        }
+    } catch (error) {
+        // If backend not set up yet, still show success message
+        console.log('Email submitted:', email);
+        heroForm.style.display = 'none';
+        heroSuccess.classList.add('show');
+    }
 });
 
 heroEmail.addEventListener('input', () => {

@@ -54,14 +54,23 @@ app.post('/webhook', express.raw({type: 'application/json'}), async (req, res) =
     switch (event.type) {
         case 'payment_intent.succeeded':
             const paymentIntent = event.data.object;
+            const customerData = paymentIntent.metadata;
+
             // Save the customer and payment information to your database
-            console.log('Payment succeeded:', paymentIntent.metadata);
-            // TODO: Add customer to database, send confirmation email, etc.
+            console.log('Payment succeeded:', customerData);
+
+            // TODO: Send notification email to team
+            // Send to: Miguel@proprhome.com, info@proprhome.com
+            // Include: Customer name, email, phone, company, payment amount
+
+            // TODO: Send confirmation email to customer
+            // Send welcome email with next steps
+
             break;
         case 'payment_intent.payment_failed':
             const failedPayment = event.data.object;
             console.log('Payment failed:', failedPayment.metadata);
-            // TODO: Handle failed payment
+            // TODO: Handle failed payment, notify team
             break;
     }
 
