@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Create payment intent on the server
         // REPLACE THIS WITH YOUR ACTUAL ENDPOINT
         try {
-            const response = await fetch('/create-payment-intent', {
+            const response = await fetch('http://localhost:3000/create-payment-intent', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -97,6 +97,9 @@ document.addEventListener('DOMContentLoaded', function() {
             successMessage.classList.add('show');
             confirmEmailSpan.textContent = customerData.email;
             successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            // Send Pioneer confirmation email
+            sendPioneerConfirmationEmail(customerData);
         }
     }
 
@@ -121,6 +124,42 @@ document.addEventListener('DOMContentLoaded', function() {
             submitButton.disabled = false;
             buttonText.style.display = 'inline';
             spinner.style.display = 'none';
+        }
+    }
+
+    // Send Pioneer confirmation email using EmailJS
+    async function sendPioneerConfirmationEmail(customerData) {
+        try {
+            // Initialize EmailJS with the same credentials
+            emailjs.init("JlCyQz-zxjtUxXop");
+            
+            // Send Pioneer welcome email to user
+            await emailjs.send('service_j566zhk', 'template_9nqa2fj', {
+                to_email: customerData.email,
+                to_name: customerData.firstName,
+                from_name: 'ProprHome Team',
+                customer_name: customerData.firstName + ' ' + customerData.surname,
+                customer_email: customerData.email,
+                customer_phone: customerData.phoneNumber,
+                customer_company: customerData.company || 'Not provided',
+                payment_amount: '€99.00',
+                payment_date: new Date().toLocaleString('en-GB', { timeZone: 'Europe/Lisbon' }),
+                pioneer_status: 'Lifetime Access Activated'
+            });
+
+            // Send notification to team
+            await emailjs.send('service_j566zhk', 'template_team_notification', {
+                to_email: 'Miguel@proprhome.com,info@proprhome.com',
+                to_name: 'ProprHome Team',
+                from_name: 'ProprHome System',
+                user_email: customerData.email,
+                signup_date: new Date().toLocaleString('en-GB', { timeZone: 'Europe/Lisbon' }),
+                source: 'Pioneer Program Payment - €99'
+            });
+
+            console.log('✅ Pioneer confirmation emails sent successfully');
+        } catch (error) {
+            console.error('❌ Error sending Pioneer confirmation emails:', error);
         }
     }
 });

@@ -87,8 +87,11 @@ toggleButtons.forEach(button => {
 });
 
 // ================================
-// Email Form Validation
+// Email Form with EmailJS
 // ================================
+
+// Initialize EmailJS
+emailjs.init("JlCyQz-zxjtUxXop");
 
 const heroForm = document.getElementById('heroForm');
 const heroEmail = document.getElementById('heroEmail');
@@ -117,26 +120,34 @@ heroForm.addEventListener('submit', async (e) => {
     heroError.textContent = '';
     heroEmail.classList.remove('error');
 
-    // Send email to backend
+    // Send email using EmailJS
     try {
-        const response = await fetch('/subscribe-early-access', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ email })
+        // Send confirmation email to user
+        await emailjs.send('service_j566zhk', 'template_user_confirmation', {
+            to_email: email,
+            to_name: 'ProprHome User',
+            from_name: 'ProprHome Team',
+            message: 'Thank you for joining our early access list! You\'ll receive exclusive updates and priority access when we launch.'
         });
 
-        if (response.ok) {
-            // Success - show success message
-            heroForm.style.display = 'none';
-            heroSuccess.classList.add('show');
-        } else {
-            showError('Something went wrong. Please try again.');
-        }
+        // Send notification to team
+        await emailjs.send('service_j566zhk', 'template_team_notification', {
+            to_email: 'Miguel@proprhome.com,info@proprhome.com',
+            to_name: 'ProprHome Team',
+            from_name: 'ProprHome System',
+            user_email: email,
+            signup_date: new Date().toLocaleString('en-GB', { timeZone: 'Europe/Lisbon' }),
+            source: 'Homepage Hero Form'
+        });
+
+        // Success - show success message
+        heroForm.style.display = 'none';
+        heroSuccess.classList.add('show');
+        console.log('✅ Early access emails sent successfully');
+
     } catch (error) {
-        // If backend not set up yet, still show success message
-        console.log('Email submitted:', email);
+        console.error('❌ Error sending emails:', error);
+        // Still show success message to user (better UX)
         heroForm.style.display = 'none';
         heroSuccess.classList.add('show');
     }
