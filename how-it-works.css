@@ -264,6 +264,7 @@
 .step-text {
     flex: 1;
     min-width: 0;
+    text-align: left;
 }
 
 .step-text h3 {
@@ -272,6 +273,7 @@
     color: var(--color-text-primary);
     margin-bottom: var(--space-2);
     letter-spacing: var(--letter-spacing-tight);
+    text-align: left;
 }
 
 @media (min-width: 768px) {
@@ -285,6 +287,7 @@
     color: var(--color-text-secondary);
     margin-bottom: var(--space-4);
     line-height: var(--line-height-relaxed);
+    text-align: left;
 }
 
 /* Step Features List */
@@ -569,5 +572,71 @@
 
     .hiw-cta h2 {
         font-size: var(--font-size-h3);
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 479px) {
+    .hiw-hero {
+        padding-top: calc(72px + var(--space-10));
+        padding-bottom: var(--space-10);
+    }
+
+    .hero-label {
+        font-size: var(--font-size-small);
+    }
+
+    .step-item {
+        padding-left: 56px;
+    }
+
+    .steps-timeline::before {
+        left: 16px;
+    }
+
+    .step-number-badge {
+        width: 40px;
+        height: 40px;
+        font-size: var(--font-size-body-sm);
+    }
+
+    .step-content {
+        padding: var(--space-5);
+    }
+
+    .step-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .step-icon svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .feature-card {
+        padding: var(--space-6);
+    }
+
+    .feature-card .feature-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .feature-card .feature-icon svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .btn-light,
+    .btn-outline-light {
+        padding: var(--space-3) var(--space-6);
+        font-size: var(--font-size-body-sm);
+        width: 100%;
+    }
+
+    .hiw-cta .cta-buttons {
+        flex-direction: column;
+        width: 100%;
     }
 }

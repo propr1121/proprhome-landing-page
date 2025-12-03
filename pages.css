@@ -1125,3 +1125,190 @@
     border-color: var(--color-primary);
     box-shadow: 0 0 0 4px var(--color-primary-subtle);
 }
+
+/* ================================
+   Mobile Responsive Adjustments
+   ================================ */
+
+@media (max-width: 767px) {
+    /* Page Hero */
+    .page-hero {
+        padding-top: calc(72px + var(--space-16));
+        padding-bottom: var(--space-16);
+    }
+
+    .page-hero h1 {
+        font-size: var(--font-size-h1);
+    }
+
+    .page-hero-compact {
+        padding-top: calc(72px + var(--space-12));
+        padding-bottom: var(--space-12);
+    }
+
+    /* Page Content */
+    .page-content {
+        padding: var(--space-16) 0;
+    }
+
+    .content-main h2 {
+        font-size: var(--font-size-h3);
+        margin-top: var(--space-10);
+    }
+
+    /* Page CTA */
+    .page-cta {
+        padding: var(--space-16) 0;
+    }
+
+    .page-cta h2 {
+        font-size: var(--font-size-h3);
+    }
+
+    /* Blog */
+    .blog-newsletter {
+        padding: var(--space-8);
+    }
+
+    .blog-newsletter h2 {
+        font-size: var(--font-size-h4);
+    }
+
+    /* Contact */
+    .contact-form-container {
+        padding: var(--space-6);
+    }
+
+    .contact-form h2 {
+        font-size: var(--font-size-h4);
+    }
+
+    /* FAQ Section */
+    .faq-section {
+        padding: var(--space-16) 0;
+    }
+
+    .faq-section h2 {
+        font-size: var(--font-size-h3);
+    }
+
+    .faq-item {
+        padding: var(--space-5);
+    }
+
+    /* Legal Pages */
+    .legal-text section {
+        margin-bottom: var(--space-10);
+        padding-bottom: var(--space-10);
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 479px) {
+    /* Page Hero */
+    .page-hero {
+        padding-top: calc(72px + var(--space-12));
+        padding-bottom: var(--space-12);
+    }
+
+    .page-hero h1 {
+        font-size: var(--font-size-h2);
+    }
+
+    .page-hero p {
+        font-size: var(--font-size-body);
+    }
+
+    /* Page Content */
+    .page-content {
+        padding: var(--space-12) 0;
+    }
+
+    .content-main.centered p.lead {
+        font-size: var(--font-size-body);
+    }
+
+    /* Values Grid */
+    .value-card {
+        padding: var(--space-6);
+    }
+
+    .value-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .value-icon svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    /* Blog Cards */
+    .blog-content {
+        padding: var(--space-5);
+    }
+
+    .blog-card.featured .blog-content {
+        padding: var(--space-6);
+    }
+
+    /* Perks Grid */
+    .perk-card {
+        padding: var(--space-6);
+    }
+
+    .perk-icon {
+        width: 56px;
+        height: 56px;
+    }
+
+    /* Job Cards */
+    .job-card {
+        padding: var(--space-5);
+    }
+
+    /* Contact */
+    .contact-form-container {
+        padding: var(--space-5);
+    }
+
+    .contact-icon {
+        width: 44px;
+        height: 44px;
+    }
+
+    /* Rights Grid */
+    .right-card {
+        padding: var(--space-4);
+    }
+
+    .right-icon {
+        width: 44px;
+        height: 44px;
+    }
+
+    /* Request Form */
+    .request-form {
+        padding: var(--space-6);
+    }
+
+    /* Cookie Table */
+    .cookie-category table {
+        font-size: var(--font-size-caption);
+    }
+
+    .cookie-category th,
+    .cookie-category td {
+        padding: var(--space-2) var(--space-3);
+    }
+
+    /* Buttons */
+    .page-cta .cta-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .page-cta .cta-buttons .btn {
+        width: 100%;
+    }
+}

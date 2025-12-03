@@ -486,6 +486,24 @@
 }
 
 /* Responsive Adjustments */
+@media (max-width: 767px) {
+    .benefits-section {
+        padding: var(--space-16) 0;
+    }
+
+    .benefits-section .section-title {
+        margin-bottom: var(--space-12);
+    }
+
+    .registration-section {
+        padding: var(--space-16) 0;
+    }
+
+    .form-header h2 {
+        font-size: var(--font-size-h3);
+    }
+}
+
 @media (max-width: 640px) {
     .pioneer-hero {
         padding-top: calc(72px + var(--space-16));
@@ -503,5 +521,90 @@
     .registration-container {
         padding: var(--space-8);
         margin: 0 var(--space-4);
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 479px) {
+    .pioneer-hero {
+        padding-top: calc(72px + var(--space-12));
+        padding-bottom: var(--space-12);
+    }
+
+    .pioneer-hero h1 {
+        font-size: var(--font-size-h2);
+    }
+
+    .pioneer-badge-large {
+        padding: var(--space-2) var(--space-4);
+        font-size: var(--font-size-small);
+    }
+
+    .price-display .amount {
+        font-size: 3rem;
+    }
+
+    .price-display .period {
+        font-size: var(--font-size-body);
+    }
+
+    .hero-description {
+        font-size: var(--font-size-body);
+    }
+
+    .benefits-section {
+        padding: var(--space-12) 0;
+    }
+
+    .benefit-card {
+        padding: var(--space-6);
+    }
+
+    .benefit-icon {
+        width: 56px;
+        height: 56px;
+        font-size: 24px;
+    }
+
+    .registration-section {
+        padding: var(--space-12) 0;
+    }
+
+    .registration-container {
+        padding: var(--space-6);
+        margin: 0 var(--space-3);
+    }
+
+    .form-header {
+        margin-bottom: var(--space-8);
+    }
+
+    .form-header h2,
+    .form-header h3 {
+        font-size: var(--font-size-h4);
+    }
+
+    .pioneer-form {
+        gap: var(--space-4);
+    }
+
+    .form-group input {
+        padding: var(--space-3) var(--space-4);
+    }
+
+    .payment-amount {
+        flex-direction: column;
+        gap: var(--space-2);
+        text-align: center;
+    }
+
+    .success-icon {
+        width: 64px;
+        height: 64px;
+        font-size: 32px;
+    }
+
+    .success-message h3 {
+        font-size: var(--font-size-h3);
     }
 }
