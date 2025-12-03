@@ -201,6 +201,8 @@
     flex-direction: column;
     gap: var(--space-5);
     transition: all var(--duration-normal) var(--ease-out);
+    text-align: left;
+    align-items: flex-start;
 }
 
 @media (min-width: 640px) {
@@ -265,6 +267,7 @@
     flex: 1;
     min-width: 0;
     text-align: left;
+    width: 100%;
 }
 
 .step-text h3 {
