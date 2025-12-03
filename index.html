@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="styles.css">
     <!-- EmailJS SDK -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!-- Translations -->
+    <script src="translations.js" defer></script>
 </head>
 <body>
     <!-- Premium Icon Sprite - Custom Designed -->
@@ -218,11 +220,16 @@
                     <img src="ProprHome_logo_for_white_bg.png?v=3" alt="ProprHome">
                 </a>
                 <div class="nav-links" id="navLinks">
-                    <a href="#agents">For Agents</a>
-                    <a href="#agencies">For Agencies</a>
-                    <a href="#buyers">For Buyers & Tenants</a>
+                    <a href="#agents" data-i18n="nav.agents">For Agents</a>
+                    <a href="#agencies" data-i18n="nav.agencies">For Agencies</a>
+                    <a href="#buyers" data-i18n="nav.buyers">For Buyers & Tenants</a>
                 </div>
-                <a href="pioneer.html" class="btn btn-primary nav-cta">Join Pioneer Program</a>
+                <div class="lang-switcher">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <span class="lang-divider"></span>
+                    <button class="lang-btn" data-lang="pt">PT</button>
+                </div>
+                <a href="pioneer.html" class="btn btn-primary nav-cta" data-i18n="nav.pioneer">Join Pioneer Program</a>
                 <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
                     <span></span>
                     <span></span>
@@ -235,8 +242,8 @@
     <!-- Floating Pioneer Pill -->
     <a href="pioneer.html" class="floating-pill" id="floatingPill">
         <img src="Branding%20/ProprHome_logomark.svg" alt="" class="pill-icon-svg" width="32" height="32">
-        <span>Pioneer Program - €99 Lifetime</span>
-        <button class="pill-cta">Claim Now</button>
+        <span data-i18n="pill.text">Pioneer Program - €99 Lifetime</span>
+        <button class="pill-cta" data-i18n="pill.cta">Claim Now</button>
     </a>
 
     <!-- Hero Section -->
@@ -244,33 +251,33 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1 class="hero-title">Real Estate That Rewards You</h1>
-                    <p class="hero-subtitle">The first platform where your success is our success</p>
+                    <h1 class="hero-title" data-i18n="hero.title">Real Estate That Rewards You</h1>
+                    <p class="hero-subtitle" data-i18n="hero.subtitle">The first platform where your success is our success</p>
                     <div class="value-pills">
                         <div class="pill">
                             <img src="Branding%20/AI%20Matching.svg" alt="" class="pill-icon" width="20" height="20">
-                            <span>AI Matching</span>
+                            <span data-i18n="hero.pill.ai">AI Matching</span>
                         </div>
                         <div class="pill">
                             <img src="Branding%20/Data%20sharing.svg" alt="" class="pill-icon" width="20" height="20">
-                            <span>Data Sharing</span>
+                            <span data-i18n="hero.pill.data">Data Sharing</span>
                         </div>
                         <div class="pill">
                             <img src="Branding%20/Real%20time%20analytics.svg" alt="" class="pill-icon" width="20" height="20">
-                            <span>Real Analytics</span>
+                            <span data-i18n="hero.pill.analytics">Real Analytics</span>
                         </div>
                     </div>
                     <form class="hero-form" id="heroForm" novalidate>
                         <div class="input-row">
-                            <input type="email" placeholder="Enter your email" id="heroEmail" aria-label="Email address">
-                            <button type="submit" class="btn btn-primary">Get Early Access</button>
+                            <input type="email" placeholder="Enter your email" id="heroEmail" aria-label="Email address" data-i18n-placeholder="hero.email.placeholder">
+                            <button type="submit" class="btn btn-primary" data-i18n="hero.cta">Get Early Access</button>
                         </div>
                         <div class="form-error" id="heroError"></div>
                     </form>
                     <div class="hero-success-message" id="heroSuccess">
                         <div class="success-checkmark">✓</div>
-                        <p><strong>You're on the list!</strong></p>
-                        <p>Check your email for confirmation and next steps.</p>
+                        <p><strong data-i18n="hero.success.title">You're on the list!</strong></p>
+                        <p data-i18n="hero.success.text">Check your email for confirmation and next steps.</p>
                     </div>
                 </div>
                 <div class="hero-visual">
@@ -318,9 +325,9 @@
     <section class="user-types">
         <div class="container">
             <div class="pill-toggle" role="tablist">
-                <button class="toggle-btn active" data-target="agents" role="tab" aria-selected="true" aria-controls="agents">For Agents</button>
-                <button class="toggle-btn" data-target="agencies" role="tab" aria-selected="false" aria-controls="agencies">For Agencies</button>
-                <button class="toggle-btn" data-target="buyers" role="tab" aria-selected="false" aria-controls="buyers">For Buyers & Tenants</button>
+                <button class="toggle-btn active" data-target="agents" role="tab" aria-selected="true" aria-controls="agents" data-i18n="toggle.agents">For Agents</button>
+                <button class="toggle-btn" data-target="agencies" role="tab" aria-selected="false" aria-controls="agencies" data-i18n="toggle.agencies">For Agencies</button>
+                <button class="toggle-btn" data-target="buyers" role="tab" aria-selected="false" aria-controls="buyers" data-i18n="toggle.buyers">For Buyers & Tenants</button>
             </div>
 
             <!-- For Agents -->
@@ -328,23 +335,23 @@
                 <div class="feature-grid">
                     <div class="feature-card">
                         <img src="Branding%20/AI%20Matching.svg" alt="" class="feature-icon" width="48" height="48">
-                        <h3>Find buyers faster</h3>
-                        <p>AI-powered matching</p>
+                        <h3 data-i18n="agents.feature1.title">Find buyers faster</h3>
+                        <p data-i18n="agents.feature1.desc">AI-powered matching</p>
                     </div>
                     <div class="feature-card">
                         <img src="Branding%20/Calendar%20sync.svg" alt="" class="feature-icon" width="48" height="48">
-                        <h3>Never double-book</h3>
-                        <p>Auto calendar sync</p>
+                        <h3 data-i18n="agents.feature2.title">Never double-book</h3>
+                        <p data-i18n="agents.feature2.desc">Auto calendar sync</p>
                     </div>
                     <div class="feature-card">
                         <img src="Branding%20/Propr%20Points.svg" alt="" class="feature-icon" width="48" height="48">
-                        <h3>Earn on every deal</h3>
-                        <p>Propr Points add up</p>
+                        <h3 data-i18n="agents.feature3.title">Earn on every deal</h3>
+                        <p data-i18n="agents.feature3.desc">Propr Points add up</p>
                     </div>
                     <div class="feature-card">
                         <img src="Branding%20/Close%20deals%20online.svg" alt="" class="feature-icon" width="48" height="48">
-                        <h3>Close deals online</h3>
-                        <p>Full digital workflow</p>
+                        <h3 data-i18n="agents.feature4.title">Close deals online</h3>
+                        <p data-i18n="agents.feature4.desc">Full digital workflow</p>
                     </div>
                 </div>
             </div>
@@ -354,23 +361,23 @@
                 <div class="feature-grid">
                     <div class="feature-card">
                         <img src="Branding%20/talks%20with%20your%20crm.svg" alt="" class="feature-icon" width="48" height="48">
-                        <h3>Talks to your CRM</h3>
-                        <p>Seamless integration</p>
+                        <h3 data-i18n="agencies.feature1.title">Talks to your CRM</h3>
+                        <p data-i18n="agencies.feature1.desc">Seamless integration</p>
                     </div>
                     <div class="feature-card">
                         <img src="Branding%20/Understand%20what%20works.svg" alt="" class="feature-icon" width="48" height="48">
-                        <h3>Understand your data</h3>
-                        <p>Real-time insights</p>
+                        <h3 data-i18n="agencies.feature2.title">Understand your data</h3>
+                        <p data-i18n="agencies.feature2.desc">Real-time insights</p>
                     </div>
                     <div class="feature-card">
                         <img src="Branding%20/Monetize%20your%20data.svg" alt="" class="feature-icon" width="48" height="48">
-                        <h3>Monetize your data</h3>
-                        <p>Turn insights into income</p>
+                        <h3 data-i18n="agencies.feature3.title">Monetize your data</h3>
+                        <p data-i18n="agencies.feature3.desc">Turn insights into income</p>
                     </div>
                     <div class="feature-card">
                         <img src="Branding%20/Optimise%20your%20team.svg" alt="" class="feature-icon" width="48" height="48">
-                        <h3>Optimise your team</h3>
-                        <p>Full team controls</p>
+                        <h3 data-i18n="agencies.feature4.title">Optimise your team</h3>
+                        <p data-i18n="agencies.feature4.desc">Full team controls</p>
                     </div>
                 </div>
             </div>
@@ -380,23 +387,23 @@
                 <div class="feature-grid">
                     <div class="feature-card">
                         <img src="Branding%20/Every%20property,%20one%20place.svg" alt="" class="feature-icon" width="48" height="48">
-                        <h3>Every property, one place</h3>
-                        <p>Complete market access</p>
+                        <h3 data-i18n="buyers.feature1.title">Every property, one place</h3>
+                        <p data-i18n="buyers.feature1.desc">Complete market access</p>
                     </div>
                     <div class="feature-card">
                         <img src="Branding%20/Matches%20you'll%20love.svg" alt="" class="feature-icon" width="48" height="48">
-                        <h3>Matches you'll love</h3>
-                        <p>AI-powered recommendations</p>
+                        <h3 data-i18n="buyers.feature2.title">Matches you'll love</h3>
+                        <p data-i18n="buyers.feature2.desc">AI-powered recommendations</p>
                     </div>
                     <div class="feature-card">
                         <img src="Branding%20/Bockchain%20verified.svg" alt="" class="feature-icon" width="48" height="48">
-                        <h3>Verified listings</h3>
-                        <p>Blockchain-backed</p>
+                        <h3 data-i18n="buyers.feature3.title">Verified listings</h3>
+                        <p data-i18n="buyers.feature3.desc">Blockchain-backed</p>
                     </div>
                     <div class="feature-card">
                         <img src="Branding%20/Direct%20agent%20chat.svg" alt="" class="feature-icon" width="48" height="48">
-                        <h3>Direct agent chat</h3>
-                        <p>Real people, real answers</p>
+                        <h3 data-i18n="buyers.feature4.title">Direct agent chat</h3>
+                        <p data-i18n="buyers.feature4.desc">Real people, real answers</p>
                     </div>
                 </div>
             </div>
@@ -406,22 +413,22 @@
     <!-- What Makes Us Different -->
     <section class="different">
         <div class="container">
-            <h2 class="section-title">Not another portal. A partner.</h2>
+            <h2 class="section-title" data-i18n="different.title">Not another portal. A partner.</h2>
             <div class="three-col">
                 <div class="col-item">
                     <img src="Branding%20/You%20grow%20we%20grow.svg" alt="" class="col-icon" width="56" height="56">
-                    <h3>You grow, we grow</h3>
-                    <p>Data sharing built into our model</p>
+                    <h3 data-i18n="different.item1.title">You grow, we grow</h3>
+                    <p data-i18n="different.item1.desc">Data sharing built into our model</p>
                 </div>
                 <div class="col-item">
                     <img src="Branding%20/Data%20sharing.svg" alt="" class="col-icon" width="56" height="56">
-                    <h3>Your data, your value</h3>
-                    <p>Monetize what you generate</p>
+                    <h3 data-i18n="different.item2.title">Your data, your value</h3>
+                    <p data-i18n="different.item2.desc">Monetize what you generate</p>
                 </div>
                 <div class="col-item">
                     <img src="Branding%20/Total%20transparency.svg" alt="" class="col-icon" width="56" height="56">
-                    <h3>Total transparency</h3>
-                    <p>No hidden fees, ever</p>
+                    <h3 data-i18n="different.item3.title">Total transparency</h3>
+                    <p data-i18n="different.item3.desc">No hidden fees, ever</p>
                 </div>
             </div>
         </div>
@@ -432,42 +439,42 @@
         <div class="container">
             <div class="pioneer-header">
                 <div class="accent-line"></div>
-                <h2>Be First. Pay Once.</h2>
-                <p>Join the agents shaping real estate's future</p>
+                <h2 data-i18n="pioneer.title">Be First. Pay Once.</h2>
+                <p data-i18n="pioneer.subtitle">Join the agents shaping real estate's future</p>
             </div>
             <div class="pricing-cards">
                 <div class="pricing-card featured">
-                    <div class="pioneer-badge">Pioneer</div>
+                    <div class="pioneer-badge" data-i18n="pioneer.badge">Pioneer</div>
                     <div class="price">
-                        <span class="amount">€99</span>
-                        <span class="period">forever</span>
+                        <span class="amount" data-i18n="pioneer.price">€99</span>
+                        <span class="period" data-i18n="pioneer.period">forever</span>
                     </div>
                     <ul class="features-list">
-                        <li>✓ Lifetime access</li>
-                        <li>✓ All pro plan features</li>
-                        <li>✓ Priority support</li>
-                        <li>✓ Shape the product</li>
-                        <li>✓ Pioneer badge</li>
+                        <li data-i18n="pioneer.feature1">✓ Lifetime access</li>
+                        <li data-i18n="pioneer.feature2">✓ All pro plan features</li>
+                        <li data-i18n="pioneer.feature3">✓ Priority support</li>
+                        <li data-i18n="pioneer.feature4">✓ Shape the product</li>
+                        <li data-i18n="pioneer.feature5">✓ Pioneer badge</li>
                     </ul>
-                    <a href="pioneer.html" class="btn btn-primary btn-full">Go Pioneer</a>
+                    <a href="pioneer.html" class="btn btn-primary btn-full" data-i18n="pioneer.cta">Go Pioneer</a>
                 </div>
                 <div class="pricing-card">
-                    <div class="standard-badge">Pro Plan</div>
+                    <div class="standard-badge" data-i18n="pioneer.standard.badge">Pro Plan</div>
                     <div class="price">
-                        <span class="amount">€59</span>
-                        <span class="period">per month</span>
+                        <span class="amount" data-i18n="pioneer.standard.price">€59</span>
+                        <span class="period" data-i18n="pioneer.standard.period">per month</span>
                     </div>
                     <ul class="features-list">
-                        <li>✓ Up to 30 property listings</li>
-                        <li>✓ Premium exposure</li>
-                        <li>✓ Scheduling tools</li>
-                        <li>✓ My similar properties</li>
-                        <li>✓ Agent in focus enabled</li>
+                        <li data-i18n="pioneer.standard.feature1">✓ Up to 30 property listings</li>
+                        <li data-i18n="pioneer.standard.feature2">✓ Premium exposure</li>
+                        <li data-i18n="pioneer.standard.feature3">✓ Scheduling tools</li>
+                        <li data-i18n="pioneer.standard.feature4">✓ My similar properties</li>
+                        <li data-i18n="pioneer.standard.feature5">✓ Agent in focus enabled</li>
                     </ul>
-                    <button class="btn btn-secondary btn-full" disabled>Coming Soon</button>
+                    <button class="btn btn-secondary btn-full" disabled data-i18n="pioneer.standard.cta">Coming Soon</button>
                 </div>
             </div>
-            <p class="pioneer-note">Limited spots available</p>
+            <p class="pioneer-note" data-i18n="pioneer.note">Limited spots available</p>
         </div>
     </section>
 
@@ -477,18 +484,18 @@
             <div class="three-col">
                 <div class="step-item">
                     <div class="step-number">1</div>
-                    <h3>Sign Up</h3>
-                    <p>Create your account in 60 seconds</p>
+                    <h3 data-i18n="steps.step1.title">Sign Up</h3>
+                    <p data-i18n="steps.step1.desc">Create your account in 60 seconds</p>
                 </div>
                 <div class="step-item">
                     <div class="step-number">2</div>
-                    <h3>Connect</h3>
-                    <p>Link your tools and CRM</p>
+                    <h3 data-i18n="steps.step2.title">Connect</h3>
+                    <p data-i18n="steps.step2.desc">Link your tools and CRM</p>
                 </div>
                 <div class="step-item">
                     <div class="step-number">3</div>
-                    <h3>Grow</h3>
-                    <p>Start earning from day one</p>
+                    <h3 data-i18n="steps.step3.title">Grow</h3>
+                    <p data-i18n="steps.step3.desc">Start earning from day one</p>
                 </div>
             </div>
         </div>
@@ -497,37 +504,37 @@
     <!-- Platform Features -->
     <section class="platform-features">
         <div class="container">
-            <h2 class="section-title">All you need in one platform</h2>
+            <h2 class="section-title" data-i18n="platform.title">All you need in one platform</h2>
             <div class="features-grid">
                 <div class="feature-card">
                     <img src="Branding%20/AI%20Search%20engine.svg" alt="" class="feature-icon" width="48" height="48">
-                    <h3>AI Powered Search</h3>
-                    <p>Find properties faster</p>
+                    <h3 data-i18n="platform.feature1.title">AI Powered Search</h3>
+                    <p data-i18n="platform.feature1.desc">Find properties faster</p>
                 </div>
                 <div class="feature-card">
                     <img src="Branding%20/Deal%20room.svg" alt="" class="feature-icon" width="48" height="48">
-                    <h3>Deal Room</h3>
-                    <p>Digital transaction management</p>
+                    <h3 data-i18n="platform.feature2.title">Deal Room</h3>
+                    <p data-i18n="platform.feature2.desc">Digital transaction management</p>
                 </div>
                 <div class="feature-card">
                     <img src="Branding%20/Calendar%20sync.svg" alt="" class="feature-icon" width="48" height="48">
-                    <h3>Calendar Sync</h3>
-                    <p>Never miss an appointment</p>
+                    <h3 data-i18n="platform.feature3.title">Calendar Sync</h3>
+                    <p data-i18n="platform.feature3.desc">Never miss an appointment</p>
                 </div>
                 <div class="feature-card">
                     <img src="Branding%20/Document%20vault.svg" alt="" class="feature-icon" width="48" height="48">
-                    <h3>Document Vault</h3>
-                    <p>Secure, verified storage</p>
+                    <h3 data-i18n="platform.feature4.title">Document Vault</h3>
+                    <p data-i18n="platform.feature4.desc">Secure, verified storage</p>
                 </div>
                 <div class="feature-card">
                     <img src="Branding%20/Real%20time%20analytics.svg" alt="" class="feature-icon" width="48" height="48">
-                    <h3>Analytics Dashboard</h3>
-                    <p>Real-time performance</p>
+                    <h3 data-i18n="platform.feature5.title">Analytics Dashboard</h3>
+                    <p data-i18n="platform.feature5.desc">Real-time performance</p>
                 </div>
                 <div class="feature-card">
                     <img src="Branding%20/Propr%20Points.svg" alt="" class="feature-icon" width="48" height="48">
-                    <h3>Propr Points</h3>
-                    <p>Rewards that matter</p>
+                    <h3 data-i18n="platform.feature6.title">Propr Points</h3>
+                    <p data-i18n="platform.feature6.desc">Rewards that matter</p>
                 </div>
             </div>
         </div>
@@ -539,19 +546,19 @@
             <div class="trust-items">
                 <div class="trust-item">
                     <img src="Branding%20/Bockchain%20verified.svg" alt="" class="trust-icon" width="48" height="48">
-                    <p>Blockchain Verified</p>
+                    <p data-i18n="trust.blockchain">Blockchain Verified</p>
                 </div>
                 <div class="trust-item">
                     <img src="Branding%20/GDPR.svg" alt="" class="trust-icon" width="48" height="48">
-                    <p>GDPR Compliant</p>
+                    <p data-i18n="trust.gdpr">GDPR Compliant</p>
                 </div>
                 <div class="trust-item">
                     <img src="Branding%20/Real-time%20Data.svg" alt="" class="trust-icon" width="48" height="48">
-                    <p>Real-time Data</p>
+                    <p data-i18n="trust.realtime">Real-time Data</p>
                 </div>
                 <div class="trust-item">
                     <img src="Branding%20/Agent%20first.svg" alt="" class="trust-icon" width="48" height="48">
-                    <p>Agent-First</p>
+                    <p data-i18n="trust.agent">Agent-First</p>
                 </div>
             </div>
         </div>
@@ -560,12 +567,12 @@
     <!-- Final CTA -->
     <section class="final-cta">
         <div class="container">
-            <h2>Ready to join us?</h2>
+            <h2 data-i18n="cta.title">Ready to join us?</h2>
             <div class="cta-buttons">
-                <a href="pioneer.html" class="btn btn-primary btn-large">Become a Pioneer - €99</a>
-                <a href="how-it-works.html" class="btn btn-secondary-outline btn-large">See How It Works</a>
+                <a href="pioneer.html" class="btn btn-primary btn-large" data-i18n="cta.primary">Become a Pioneer - €99</a>
+                <a href="how-it-works.html" class="btn btn-secondary-outline btn-large" data-i18n="cta.secondary">See How It Works</a>
             </div>
-            <p class="cta-note">No commitments • Start today</p>
+            <p class="cta-note" data-i18n="cta.note">No commitments • Start today</p>
         </div>
     </section>
 
@@ -577,32 +584,32 @@
                     <div class="footer-logo">
                         <img src="Branding%20/ProprHome_logomark.svg" alt="ProprHome">
                     </div>
-                    <p>We have it all.</p>
+                    <p data-i18n="footer.tagline">We have it all.</p>
                 </div>
                 <div class="footer-col">
-                    <h4>Product</h4>
-                    <a href="#agents">For Agents</a>
-                    <a href="#agencies">For Agencies</a>
-                    <a href="#buyers">For Buyers</a>
-                    <a href="how-it-works.html">Features</a>
+                    <h4 data-i18n="footer.product">Product</h4>
+                    <a href="#agents" data-i18n="nav.agents">For Agents</a>
+                    <a href="#agencies" data-i18n="nav.agencies">For Agencies</a>
+                    <a href="#buyers" data-i18n="nav.buyers">For Buyers & Tenants</a>
+                    <a href="how-it-works.html" data-i18n="footer.features">Features</a>
                 </div>
                 <div class="footer-col">
-                    <h4>Company</h4>
-                    <a href="about.html">About</a>
-                    <a href="blog.html">Blog</a>
-                    <a href="careers.html">Careers</a>
-                    <a href="contact.html">Contact</a>
+                    <h4 data-i18n="footer.company">Company</h4>
+                    <a href="about.html" data-i18n="footer.about">About</a>
+                    <a href="blog.html" data-i18n="footer.blog">Blog</a>
+                    <a href="careers.html" data-i18n="footer.careers">Careers</a>
+                    <a href="contact.html" data-i18n="footer.contact">Contact</a>
                 </div>
                 <div class="footer-col">
-                    <h4>Legal</h4>
-                    <a href="privacy.html">Privacy</a>
-                    <a href="terms.html">Terms</a>
-                    <a href="cookies.html">Cookies</a>
+                    <h4 data-i18n="footer.legal">Legal</h4>
+                    <a href="privacy.html" data-i18n="footer.privacy">Privacy</a>
+                    <a href="terms.html" data-i18n="footer.terms">Terms</a>
+                    <a href="cookies.html" data-i18n="footer.cookies">Cookies</a>
                     <a href="gdpr.html">GDPR</a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 ProprHome. All rights reserved.</p>
+                <p data-i18n="footer.copyright">&copy; 2025 ProprHome. All rights reserved.</p>
             </div>
         </div>
     </footer>

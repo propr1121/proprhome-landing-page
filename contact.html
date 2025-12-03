@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="pages.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="translations.js"></script>
 </head>
 <body>
     <!-- Navigation -->
@@ -22,11 +23,16 @@
                     <img src="ProprHome_logo_for_white_bg.png?v=3" alt="ProprHome">
                 </a>
                 <div class="nav-links" id="navLinks">
-                    <a href="index.html#agents">For Agents</a>
-                    <a href="index.html#agencies">For Agencies</a>
-                    <a href="index.html#buyers">For Buyers & Tenants</a>
+                    <a href="index.html#agents" data-i18n="nav.agents">For Agents</a>
+                    <a href="index.html#agencies" data-i18n="nav.agencies">For Agencies</a>
+                    <a href="index.html#buyers" data-i18n="nav.buyers">For Buyers & Tenants</a>
                 </div>
-                <a href="pioneer.html" class="btn btn-primary nav-cta">Join Pioneer Program</a>
+                <div class="lang-switcher">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <span class="lang-divider"></span>
+                    <button class="lang-btn" data-lang="pt">PT</button>
+                </div>
+                <a href="pioneer.html" class="btn btn-primary nav-cta" data-i18n="nav.pioneer">Join Pioneer Program</a>
                 <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
                     <span></span>
                     <span></span>
