@@ -8,9 +8,9 @@
     <link rel="icon" type="image/svg+xml" href="Branding /ProprHome_logomark.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="how-it-works-v2.css">
+    <link rel="stylesheet" href="how-it-works.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -18,7 +18,7 @@
         <div class="container">
             <div class="nav-content">
                 <a href="index.html" class="logo">
-                    <img src="ProprHome_logo_for_white_bg.png?v=3" alt="ProprHome" style="height: 28px !important;">
+                    <img src="ProprHome_logo_for_white_bg.png?v=3" alt="ProprHome">
                 </a>
                 <div class="nav-links" id="navLinks">
                     <a href="index.html#agents">For Agents</a>
@@ -38,19 +38,24 @@
     <!-- Hero Section -->
     <section class="hiw-hero">
         <div class="container">
-            <h1>How We Work</h1>
-            <p class="subtitle">Simple. Transparent. Rewarding.</p>
-        </div>
-    </section>
+            <span class="hero-label">How It Works</span>
+            <h1>Simple. Transparent. Rewarding.</h1>
+            <p class="hero-subtitle">Whether you're a real estate professional or searching for your dream property, ProprHome makes the process seamless.</p>
 
-    <!-- User Toggle -->
-    <section class="toggle-section">
-        <div class="container">
+            <!-- User Toggle -->
             <div class="user-toggle">
-                <button class="toggle-option active" data-target="professionals">
+                <button class="toggle-btn active" data-target="professionals">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                        <circle cx="12" cy="7" r="4"/>
+                    </svg>
                     For Professionals
                 </button>
-                <button class="toggle-option" data-target="customers">
+                <button class="toggle-btn" data-target="customers">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20">
+                        <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                        <polyline points="9 22 9 12 15 12 15 22"/>
+                    </svg>
                     For Customers
                 </button>
             </div>
@@ -60,183 +65,194 @@
     <!-- Professionals Content -->
     <div class="content-wrapper active" id="professionals">
 
-        <!-- Section 1 -->
-        <section class="hiw-section">
+        <!-- Steps Timeline -->
+        <section class="steps-section">
             <div class="container">
-                <div class="hiw-grid">
-                    <div class="hiw-visual">
-                        <div class="icon-circle">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                                <circle cx="12" cy="7" r="4"/>
-                            </svg>
+                <div class="steps-timeline">
+
+                    <!-- Step 1 -->
+                    <div class="step-item">
+                        <div class="step-number-badge">1</div>
+                        <div class="step-content">
+                            <div class="step-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="12" cy="8" r="4"/>
+                                    <path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/>
+                                    <path d="M16 3.13a4 4 0 010 7.75"/>
+                                    <path d="M21 21v-2a4 4 0 00-3-3.87"/>
+                                </svg>
+                            </div>
+                            <div class="step-text">
+                                <h3>Get Started in Seconds</h3>
+                                <p>Create your professional profile and get verified quickly.</p>
+                                <ul class="step-features">
+                                    <li>Sign up with your professional email</li>
+                                    <li>Verify your real estate license</li>
+                                    <li>Complete your profile in under 2 minutes</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div class="hiw-content">
-                        <span class="step-number">Step 1</span>
-                        <h2>Get Started in Seconds</h2>
-                        <ul class="feature-list">
-                            <li>Sign up with your professional email</li>
-                            <li>Verify your real estate license</li>
-                            <li>Complete your profile in under 2 minutes</li>
-                        </ul>
+
+                    <!-- Step 2 -->
+                    <div class="step-item">
+                        <div class="step-number-badge">2</div>
+                        <div class="step-content">
+                            <div class="step-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M3 10.5L12 3l9 7.5V20a2 2 0 01-2 2H5a2 2 0 01-2-2v-9.5z"/>
+                                    <path d="M9 22V12h6v10"/>
+                                    <circle cx="12" cy="7" r="1.5" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <div class="step-text">
+                                <h3>List Your Properties</h3>
+                                <p>Upload and enhance your listings with AI-powered tools.</p>
+                                <ul class="step-features">
+                                    <li>Upload properties via CSV or manual entry</li>
+                                    <li>AI enhances your listings automatically</li>
+                                    <li>Blockchain verification adds trust badge</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- Step 3 -->
+                    <div class="step-item">
+                        <div class="step-number-badge">3</div>
+                        <div class="step-content">
+                            <div class="step-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <rect x="2" y="3" width="8" height="6" rx="1"/>
+                                    <rect x="14" y="3" width="8" height="6" rx="1"/>
+                                    <rect x="8" y="15" width="8" height="6" rx="1"/>
+                                    <path d="M6 9v2a2 2 0 002 2h2"/>
+                                    <path d="M18 9v2a2 2 0 01-2 2h-2"/>
+                                    <line x1="12" y1="13" x2="12" y2="15"/>
+                                </svg>
+                            </div>
+                            <div class="step-text">
+                                <h3>Connect Your Tools</h3>
+                                <p>Integrate seamlessly with your existing workflow.</p>
+                                <ul class="step-features">
+                                    <li>Sync your calendar (Google/Outlook)</li>
+                                    <li>Direct integration with your CRM</li>
+                                    <li>Your data flows seamlessly to your systems</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="step-item">
+                        <div class="step-number-badge">4</div>
+                        <div class="step-content">
+                            <div class="step-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="12" cy="12" r="3"/>
+                                    <circle cx="12" cy="3" r="1.5"/>
+                                    <circle cx="12" cy="21" r="1.5"/>
+                                    <circle cx="3" cy="12" r="1.5"/>
+                                    <circle cx="21" cy="12" r="1.5"/>
+                                    <line x1="12" y1="9" x2="12" y2="4.5"/>
+                                    <line x1="12" y1="15" x2="12" y2="19.5"/>
+                                    <line x1="9" y1="12" x2="4.5" y2="12"/>
+                                    <line x1="15" y1="12" x2="19.5" y2="12"/>
+                                </svg>
+                            </div>
+                            <div class="step-text">
+                                <h3>AI Matches Buyers</h3>
+                                <p>Let our intelligent matching connect you with qualified leads.</p>
+                                <ul class="step-features">
+                                    <li>Our AI analyzes buyer preferences</li>
+                                    <li>You receive qualified leads instantly</li>
+                                    <li>No more time wasted on mismatched viewings</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="step-item">
+                        <div class="step-number-badge">5</div>
+                        <div class="step-content">
+                            <div class="step-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6z"/>
+                                    <polyline points="14 2 14 8 20 8"/>
+                                    <path d="M9 15l2 2 4-4"/>
+                                </svg>
+                            </div>
+                            <div class="step-text">
+                                <h3>Manage Everything in One Place</h3>
+                                <p>Streamline your entire transaction workflow.</p>
+                                <ul class="step-features">
+                                    <li>Digital document signing</li>
+                                    <li>Secure communication channel</li>
+                                    <li>Track deal progress in real-time</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 6 -->
+                    <div class="step-item">
+                        <div class="step-number-badge">6</div>
+                        <div class="step-content">
+                            <div class="step-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="currentColor" fill-opacity="0.15"/>
+                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                                </svg>
+                            </div>
+                            <div class="step-text">
+                                <h3>Earn Rewards & Unlock Features</h3>
+                                <p>Get rewarded for every successful interaction.</p>
+                                <ul class="step-features">
+                                    <li>Earn Propr Points on every interaction</li>
+                                    <li>Unlock premium tools and features</li>
+                                    <li>Boost listings for maximum visibility</li>
+                                    <li>Get priority support and early access</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
 
-        <!-- Section 2 -->
-        <section class="hiw-section alternate">
+        <!-- Features Grid -->
+        <section class="features-highlight">
             <div class="container">
-                <div class="hiw-grid reverse">
-                    <div class="hiw-visual">
-                        <div class="icon-circle">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                                <polyline points="9 22 9 12 15 12 15 22"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="hiw-content">
-                        <span class="step-number">Step 2</span>
-                        <h2>List Your Properties</h2>
-                        <ul class="feature-list">
-                            <li>Upload properties via CSV or manual entry</li>
-                            <li>AI enhances your listings automatically</li>
-                            <li>Blockchain verification adds trust badge</li>
-                        </ul>
-                    </div>
+                <div class="features-header">
+                    <h2>Why Professionals Choose ProprHome</h2>
+                    <p>Built by real estate professionals, for real estate professionals.</p>
                 </div>
-            </div>
-        </section>
-
-        <!-- Section 3 -->
-        <section class="hiw-section">
-            <div class="container">
-                <div class="hiw-grid">
-                    <div class="hiw-visual">
-                        <div class="icon-circle">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="16 3 21 3 21 8"/>
-                                <line x1="4" y1="20" x2="21" y2="3"/>
-                                <polyline points="21 16 21 21 16 21"/>
-                                <line x1="15" y1="15" x2="21" y2="21"/>
-                                <line x1="4" y1="4" x2="9" y2="9"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="hiw-content">
-                        <span class="step-number">Step 3</span>
-                        <h2>Connect Your Tools</h2>
-                        <ul class="feature-list">
-                            <li>Sync your calendar (Google/Outlook)</li>
-                            <li>Direct integration with your CRM</li>
-                            <li>Your data flows seamlessly to your systems</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 4 -->
-        <section class="hiw-section alternate">
-            <div class="container">
-                <div class="hiw-grid reverse">
-                    <div class="hiw-visual">
-                        <div class="icon-circle">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-                                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-                                <circle cx="9" cy="16" r="1"/>
-                                <circle cx="15" cy="16" r="1"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="hiw-content">
-                        <span class="step-number">Step 4</span>
-                        <h2>AI Matches Buyers</h2>
-                        <ul class="feature-list">
-                            <li>Our AI analyzes buyer preferences</li>
-                            <li>You receive qualified leads instantly</li>
-                            <li>No more time wasted on mismatched viewings</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 5 -->
-        <section class="hiw-section">
-            <div class="container">
-                <div class="hiw-grid">
-                    <div class="hiw-visual">
-                        <div class="icon-circle">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="hiw-content">
-                        <span class="step-number">Step 5</span>
-                        <h2>Manage Everything in one place</h2>
-                        <ul class="feature-list">
-                            <li>Digital document signing</li>
-                            <li>Secure communication channel</li>
-                            <li>Track deal progress in real-time</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 6 -->
-        <section class="hiw-section alternate">
-            <div class="container">
-                <div class="hiw-grid reverse">
-                    <div class="hiw-visual">
-                        <div class="icon-circle">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="hiw-content">
-                        <span class="step-number">Step 6</span>
-                        <h2>Earn Rewards & Unlock Features</h2>
-                        <ul class="feature-list">
-                            <li>Earn Propr Points on every interaction</li>
-                            <li>Unlock premium tools and features</li>
-                            <li>Boost listings for maximum visibility</li>
-                            <li>Get priority support and early access</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Special Focus Sections -->
-        <section class="focus-section">
-            <div class="container">
-                <div class="focus-grid">
-                    <div class="focus-card">
-                        <div class="focus-icon-svg">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <line x1="18" y1="20" x2="18" y2="10"/>
-                                <line x1="12" y1="20" x2="12" y2="4"/>
-                                <line x1="6" y1="20" x2="6" y2="14"/>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M3 3v18h18"/>
+                                <path d="M7 14l4-4 4 4 5-6"/>
+                                <circle cx="7" cy="14" r="1.5" fill="currentColor"/>
+                                <circle cx="11" cy="10" r="1.5" fill="currentColor"/>
+                                <circle cx="15" cy="14" r="1.5" fill="currentColor"/>
+                                <circle cx="20" cy="8" r="1.5" fill="currentColor"/>
                             </svg>
                         </div>
                         <h3>Your Data, Your Control</h3>
                         <ul>
-                            <li>All leads and customer data flow directly to YOUR CRM</li>
+                            <li>All leads flow directly to YOUR CRM</li>
                             <li>We never lock your data in our platform</li>
                             <li>Export anytime, own everything</li>
                             <li>Real-time sync with your existing tools</li>
                         </ul>
                     </div>
-                    <div class="focus-card">
-                        <div class="focus-icon-svg">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="currentColor" fill-opacity="0.15"/>
                                 <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
                             </svg>
                         </div>
@@ -255,10 +271,10 @@
         <!-- CTA Section -->
         <section class="hiw-cta">
             <div class="container">
-                <h2>Ready to grow your business?</h2>
-                <p>Join the ProprHome Pioneer Program for lifetime access</p>
-                <div class="cta-buttons">
-                    <a href="pioneer.html" class="btn btn-primary btn-large">Become a Pioneer - €99</a>
+                <div class="cta-content">
+                    <h2>Ready to grow your business?</h2>
+                    <p>Join the ProprHome Pioneer Program for lifetime access</p>
+                    <a href="pioneer.html" class="btn btn-light btn-large">Become a Pioneer - €99</a>
                 </div>
             </div>
         </section>
@@ -267,154 +283,157 @@
     <!-- Customers Content -->
     <div class="content-wrapper" id="customers">
 
-        <!-- Section 1 -->
-        <section class="hiw-section">
+        <!-- Steps Timeline -->
+        <section class="steps-section">
             <div class="container">
-                <div class="hiw-grid">
-                    <div class="hiw-visual">
-                        <div class="icon-circle">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="11" cy="11" r="8"/>
-                                <path d="m21 21-4.35-4.35"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="hiw-content">
-                        <span class="step-number">Step 1</span>
-                        <h2>Start Your Search</h2>
-                        <ul class="feature-list">
-                            <li>No sign-up required to browse</li>
-                            <li>Access every property in the market</li>
-                            <li>Filter by your exact needs</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+                <div class="steps-timeline">
 
-        <!-- Section 2 -->
-        <section class="hiw-section alternate">
-            <div class="container">
-                <div class="hiw-grid reverse">
-                    <div class="hiw-visual">
-                        <div class="icon-circle">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-                                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-                                <circle cx="9" cy="16" r="1"/>
-                                <circle cx="15" cy="16" r="1"/>
-                            </svg>
+                    <!-- Step 1 -->
+                    <div class="step-item">
+                        <div class="step-number-badge">1</div>
+                        <div class="step-content">
+                            <div class="step-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="10" cy="10" r="7"/>
+                                    <path d="M21 21l-4.35-4.35"/>
+                                    <path d="M10 7v6"/>
+                                    <path d="M7 10h6"/>
+                                </svg>
+                            </div>
+                            <div class="step-text">
+                                <h3>Start Your Search</h3>
+                                <p>Explore every property in the market with no barriers.</p>
+                                <ul class="step-features">
+                                    <li>No sign-up required to browse</li>
+                                    <li>Access every property in the market</li>
+                                    <li>Filter by your exact needs</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div class="hiw-content">
-                        <span class="step-number">Step 2</span>
-                        <h2>AI Finds Your Match</h2>
-                        <ul class="feature-list">
-                            <li>Tell us what you're looking for</li>
-                            <li>Our AI searches beyond basic filters</li>
-                            <li>Get personalized recommendations</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Section 3 -->
-        <section class="hiw-section">
-            <div class="container">
-                <div class="hiw-grid">
-                    <div class="hiw-visual">
-                        <div class="icon-circle">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                            </svg>
+                    <!-- Step 2 -->
+                    <div class="step-item">
+                        <div class="step-number-badge">2</div>
+                        <div class="step-content">
+                            <div class="step-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="12" cy="12" r="3"/>
+                                    <circle cx="12" cy="3" r="1.5"/>
+                                    <circle cx="12" cy="21" r="1.5"/>
+                                    <circle cx="3" cy="12" r="1.5"/>
+                                    <circle cx="21" cy="12" r="1.5"/>
+                                    <line x1="12" y1="9" x2="12" y2="4.5"/>
+                                    <line x1="12" y1="15" x2="12" y2="19.5"/>
+                                    <line x1="9" y1="12" x2="4.5" y2="12"/>
+                                    <line x1="15" y1="12" x2="19.5" y2="12"/>
+                                </svg>
+                            </div>
+                            <div class="step-text">
+                                <h3>AI Finds Your Match</h3>
+                                <p>Our intelligent system understands what you really want.</p>
+                                <ul class="step-features">
+                                    <li>Tell us what you're looking for</li>
+                                    <li>Our AI searches beyond basic filters</li>
+                                    <li>Get personalized recommendations</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div class="hiw-content">
-                        <span class="step-number">Step 3</span>
-                        <h2>Verified Properties Only</h2>
-                        <ul class="feature-list">
-                            <li>Every listing blockchain-verified</li>
-                            <li>No fake photos or misleading info</li>
-                            <li>See real availability in real-time</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Section 4 -->
-        <section class="hiw-section alternate">
-            <div class="container">
-                <div class="hiw-grid reverse">
-                    <div class="hiw-visual">
-                        <div class="icon-circle">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-                            </svg>
+                    <!-- Step 3 -->
+                    <div class="step-item">
+                        <div class="step-number-badge">3</div>
+                        <div class="step-content">
+                            <div class="step-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                    <path d="M9 12l2 2 4-4"/>
+                                </svg>
+                            </div>
+                            <div class="step-text">
+                                <h3>Verified Properties Only</h3>
+                                <p>Every listing is authenticated for your peace of mind.</p>
+                                <ul class="step-features">
+                                    <li>Every listing blockchain-verified</li>
+                                    <li>No fake photos or misleading info</li>
+                                    <li>See real availability in real-time</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div class="hiw-content">
-                        <span class="step-number">Step 4</span>
-                        <h2>Connect with Real Agents</h2>
-                        <ul class="feature-list">
-                            <li>Chat directly with verified agents</li>
-                            <li>Schedule viewings instantly</li>
-                            <li>No spam or fake profiles</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Section 5 -->
-        <section class="hiw-section">
-            <div class="container">
-                <div class="hiw-grid">
-                    <div class="hiw-visual">
-                        <div class="icon-circle">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-                                <line x1="16" y1="2" x2="16" y2="6"/>
-                                <line x1="8" y1="2" x2="8" y2="6"/>
-                                <line x1="3" y1="10" x2="21" y2="10"/>
-                            </svg>
+                    <!-- Step 4 -->
+                    <div class="step-item">
+                        <div class="step-number-badge">4</div>
+                        <div class="step-content">
+                            <div class="step-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
+                                    <circle cx="8" cy="12" r="1" fill="currentColor"/>
+                                    <circle cx="12" cy="12" r="1" fill="currentColor"/>
+                                    <circle cx="16" cy="12" r="1" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <div class="step-text">
+                                <h3>Connect with Real Agents</h3>
+                                <p>Chat directly with verified professionals.</p>
+                                <ul class="step-features">
+                                    <li>Chat directly with verified agents</li>
+                                    <li>Schedule viewings instantly</li>
+                                    <li>No spam or fake profiles</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div class="hiw-content">
-                        <span class="step-number">Step 5</span>
-                        <h2>Tour Properties</h2>
-                        <ul class="feature-list">
-                            <li>Book viewings that sync with agent calendars</li>
-                            <li>Virtual tours available</li>
-                            <li>Bring your documents digitally</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Section 6 -->
-        <section class="hiw-section alternate">
-            <div class="container">
-                <div class="hiw-grid reverse">
-                    <div class="hiw-visual">
-                        <div class="icon-circle">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                                <polyline points="22 4 12 14.01 9 11.01"/>
-                            </svg>
+                    <!-- Step 5 -->
+                    <div class="step-item">
+                        <div class="step-number-badge">5</div>
+                        <div class="step-content">
+                            <div class="step-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <rect x="3" y="4" width="18" height="18" rx="2"/>
+                                    <line x1="16" y1="2" x2="16" y2="6"/>
+                                    <line x1="8" y1="2" x2="8" y2="6"/>
+                                    <line x1="3" y1="10" x2="21" y2="10"/>
+                                    <path d="M9 14l2 2 4-4"/>
+                                </svg>
+                            </div>
+                            <div class="step-text">
+                                <h3>Tour Properties</h3>
+                                <p>Experience properties on your schedule.</p>
+                                <ul class="step-features">
+                                    <li>Book viewings that sync with agent calendars</li>
+                                    <li>Virtual tours available</li>
+                                    <li>Bring your documents digitally</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div class="hiw-content">
-                        <span class="step-number">Step 6</span>
-                        <h2>Close the Deal Securely</h2>
-                        <ul class="feature-list">
-                            <li>Digital contract signing</li>
-                            <li>Secure document storage</li>
-                            <li>Track your purchase/rental progress</li>
-                        </ul>
+
+                    <!-- Step 6 -->
+                    <div class="step-item">
+                        <div class="step-number-badge">6</div>
+                        <div class="step-content">
+                            <div class="step-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+                                    <path d="M8 12l3 3 5-6" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <div class="step-text">
+                                <h3>Close the Deal Securely</h3>
+                                <p>Complete your transaction with confidence.</p>
+                                <ul class="step-features">
+                                    <li>Digital contract signing</li>
+                                    <li>Secure document storage</li>
+                                    <li>Track your purchase/rental progress</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -422,11 +441,13 @@
         <!-- CTA Section -->
         <section class="hiw-cta">
             <div class="container">
-                <h2>Ready to find your perfect home?</h2>
-                <p>Start browsing properties today</p>
-                <div class="cta-buttons">
-                    <a href="index.html" class="btn btn-primary btn-large">Start Searching</a>
-                    <a href="index.html" class="btn btn-secondary-outline btn-large">Back to Home</a>
+                <div class="cta-content">
+                    <h2>Ready to find your perfect home?</h2>
+                    <p>Start browsing properties today - completely free</p>
+                    <div class="cta-buttons">
+                        <a href="index.html" class="btn btn-light btn-large">Start Searching</a>
+                        <a href="index.html" class="btn btn-outline-light btn-large">Back to Home</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -438,7 +459,7 @@
             <div class="footer-content">
                 <div class="footer-col">
                     <div class="footer-logo">
-                        <img src="Branding%20/ProprHome_logomark.svg" alt="ProprHome" height="32">
+                        <img src="Branding%20/ProprHome_logomark.svg" alt="ProprHome">
                     </div>
                     <p>We have it all.</p>
                 </div>
@@ -451,17 +472,17 @@
                 </div>
                 <div class="footer-col">
                     <h4>Company</h4>
-                    <a href="#about">About</a>
-                    <a href="#blog">Blog</a>
-                    <a href="#careers">Careers</a>
-                    <a href="#contact">Contact</a>
+                    <a href="about.html">About</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="careers.html">Careers</a>
+                    <a href="contact.html">Contact</a>
                 </div>
                 <div class="footer-col">
                     <h4>Legal</h4>
-                    <a href="#privacy">Privacy</a>
-                    <a href="#terms">Terms</a>
-                    <a href="#cookies">Cookies</a>
-                    <a href="#gdpr">GDPR</a>
+                    <a href="privacy.html">Privacy</a>
+                    <a href="terms.html">Terms</a>
+                    <a href="cookies.html">Cookies</a>
+                    <a href="gdpr.html">GDPR</a>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -470,6 +491,27 @@
         </div>
     </footer>
 
-    <script src="how-it-works.js"></script>
+    <script>
+        // Toggle functionality
+        document.querySelectorAll('.toggle-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update toggle buttons
+                document.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                // Update content
+                const target = btn.dataset.target;
+                document.querySelectorAll('.content-wrapper').forEach(wrapper => {
+                    wrapper.classList.remove('active');
+                });
+                document.getElementById(target).classList.add('active');
+            });
+        });
+
+        // Mobile menu
+        document.getElementById('mobileMenuToggle')?.addEventListener('click', () => {
+            document.getElementById('navLinks')?.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
