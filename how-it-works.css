@@ -120,6 +120,7 @@
 .steps-section {
     padding: var(--space-20) 0;
     background-color: var(--color-background);
+    overflow-x: hidden;
 }
 
 .steps-timeline {
@@ -332,6 +333,7 @@
 .features-highlight {
     padding: var(--space-20) 0;
     background: linear-gradient(180deg, var(--color-gray-50) 0%, var(--color-background) 100%);
+    overflow-x: hidden;
 }
 
 .features-header {
@@ -641,5 +643,38 @@
     .hiw-cta .cta-buttons {
         flex-direction: column;
         width: 100%;
+    }
+}
+
+/* ================================
+   Mobile Overflow Prevention
+   ================================ */
+
+@media (max-width: 767px) {
+    .hiw-hero,
+    .steps-section,
+    .features-highlight,
+    .hiw-cta {
+        overflow-x: hidden;
+        max-width: 100vw;
+    }
+
+    .step-content {
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .step-features li {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .features-grid {
+        max-width: 100%;
+    }
+
+    .feature-card {
+        max-width: 100%;
+        overflow: hidden;
     }
 }
